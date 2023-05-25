@@ -1,0 +1,199 @@
+<html>
+   <head>
+	
+	<title>Unidad 4</title>
+    <link rel="stylesheet" type "text/css" href ="estilos.css">
+
+   </head>
+   <body>
+      <h1> <a href ="index.html">Arquitectura de Computadoras</a></h1>
+      <nav>
+         <ul>
+            <li> <a href = "unidad1.html"> Unidad 1 </a> </li>
+            <li> <a href = "unidad2.html"> Unidad 2 </a> </li>
+            <li> <a href = "unidad3.html"> Unidad 3 </a> </li>
+            <li> <a href = "unidad4.html"> Unidad 4 </a> </li>
+               
+            
+         
+         </ul>
+      </nav>
+   
+      <div class= "contenido"> 
+      <div class="articulos">
+         <div >
+            <h2 class="masGrande">Unidad 4 - Procesamiento Paralelo</h2>
+            
+         </div>
+         
+         
+         <div class="secciones">
+            <div >
+               <div> <h2  class="temas">4.1 Aspectos Básicos de la Computación Paralela </h2> </div>
+               <p>La computación paralela es una técnica que utiliza múltiples procesadores para realizar cálculos complejos de manera simultánea. A diferencia de la computación secuencial, en la cual los procesos se ejecutan uno tras otro, la computación paralela permite que varios procesos se ejecuten al mismo tiempo. </p>
+                 
+               <dt>Ventajas:</dt>
+               <dt>* Permite realizar cálculos complejos en un tiempo mucho menor, lo que puede ser crucial en aplicaciones en tiempo real</dt>
+               <dt>* Es escalable, lo que significa que se puede agregar más procesadores para aumentar el poder de procesamiento.</dt>
+               <dt>* También es posible realizar tareas que no serían posibles con la computación secuencial, como la simulación de sistemas complejos o el análisis de grandes conjuntos de datos en tiempo real.</dt>
+               <dt>* Es más robusta, ya que si un procesador falla, los demás pueden continuar trabajando sin interrupción.</dt>
+            </div>
+            <div><img src="https://th.bing.com/th/id/R.86ab13ce0980acb1b89cc88888261292?rik=5wtdNTkEBP7MMQ&riu=http%3a%2f%2f1.bp.blogspot.com%2f-K8AKJh-nS18%2fUpfrJV7yHDI%2fAAAAAAAAAJA%2f0NK1lC4pJKg%2fs1600%2fcomputacion%2bparalela.jpg&ehk=IXbuAExUliTB%2bAmX8ec42IbQj%2bi5l%2bdUZb8FE6v8ea4%3d&risl=&pid=ImgRaw&r=0"></div>
+            <br> 
+         </div>
+         <div class="secciones">
+            <div >
+               <div> <h2  class="temas">4.2 Tipos de computación paralela </h2> </div>
+               <dt style="font-weight: bold;">Paralelismo a nivel de bit: </dt>
+               <dt>Desde la década de 1970 hasta alrededor de 1986, se lograba la aceleración en la arquitectura de computadoras mediante la duplicación del tamaño de la palabra. Esto reducía la cantidad de instrucciones que el procesador debía ejecutar para realizar operaciones en variables cuyos tamaños eran mayores que la longitud de la palabra.</dt>
+                <dt style="font-weight: bold;">Paralelismo a nivel de INSTRUCCION:</dt>
+               <dt>Se refiere a la posibilidad de reordenar y combinar en grupos las instrucciones que conforman un programa para ser ejecutadas en paralelo. Los procesadores modernos tienen pipeline de instrucciones de varias etapas, cada etapa corresponde a una acción diferente del procesador en la instrucción correspondiente.</dt>
+               <dt style="font-weight: bold;">Paralelismo a nivel de datos:</dt>
+               <dt>Es inherente en programas con ciclos y se enfoca en la distribución de los datos entre los diferentes nodos computacionales que deben ser tratados en paralelo. La paralelización de ciclos conduce a menudo a secuencias similares de operaciones o funciones que se realizan en los elementos de una gran estructura de datos.</dt>
+               <dt style="font-weight: bold;">Paralelismo a nivel de tareas:</dt>
+               <dt>Se refiere a la capacidad de realizar cálculos completamente diferentes en cualquier conjunto igual o diferente de datos. Contrasta con el paralelismo de datos, donde se realiza el mismo cálculo en distintos o mismos grupos de datos. Este tipo de paralelismo generalmente no escala con el tamaño de un problema.</dt>
+
+               <h2 class="subtemas">4.2.1 Clasificación</h2>
+               <p>Las computadoras paralelas pueden ser clasificadas acorde con el nivel en el que el hardware soporta paralelismo. siendo esta clasificación análoga a la distancia entre los nodos básicos de cómputo. Estos no son excluyentes entre sí, por ejemplo, los grupos de multiprocesadores simétricos son relativamente comunes.</p>
+               <dt style="font-weight: bold;">COMPUTACIÓN MULTINÚCLEO </dt>
+               <dt>Un procesador multinúcleo es un procesador que incluye múltiples unidades de ejecución (núcleos) en el mismo chip. Por ende un procesador multinúcleo puede ejecutar múltiples instrucciones por ciclo de secuencias de instrucciones múltiples.</dt>
+                <dt style="font-weight: bold;">MULTIPROCESAMIENTO SIMÉTRICO</dt>
+               <dt>Un multiprocesador simétrico (SMP) es un sistema computacional con múltiples procesadores idénticos que comparten memoria y se conectan a través de un bus. La contención del bus previene el escalado de esta arquitectura.</dt>
+               <dt style="font-weight: bold;">COMPUTACIÓN EN CLÚSTER</dt>
+               <dt>Un clúster es un grupo de ordenadores débilmente acoplados que trabajan en estrecha colaboración, de modo que en algunos aspectos pueden considerarse como un solo equipo.</dt>
+               <dt style="font-weight: bold;">PROCESAMIENTO PARALELO MASIVO</dt>
+               <dt>Tienden a ser más grandes que los clústeres, con mucho más de 100 procesadores. En un MPP, cada CPU tiene su propia memoria y una copia del sistema operativo y la aplicación.</dt>
+               <dt style="font-weight: bold;">COMPUTACIÓN DISTRIBUIDA</dt>
+               <dt>La computación distribuida es la forma más distribuida de la computación paralela. Se hace uso de ordenadores que se comunican a través de la Internet para trabajar en un problema dado.</dt>
+                <dt style="font-weight: bold;">COMPUTADORAS PARALELAS ESPECIALIZADAS</dt>
+               <dt>Dentro de la computación paralela, existen dispositivos paralelos especializados que generan interés. Aunque no son específicos para un dominio, tienden a ser aplicables sólo a unas pocas clases de problemas paralelos.</dt>
+               <dt style="font-weight: bold;">CÓMPUTO RECONFIGURABLE CON ARREGLOS DE COMPUERTAS PROGRAMABLES</dt>
+               <dt>El cómputo reconfigurable es el uso de un arreglo de compuertas programables (FPGA) como coprocesador de un ordenador de propósito general.</dt>
+               <dt style="font-weight: bold;">CÓMPUTO DE PROPÓSITO GENERAL EN UNIDADES DE PROCESAMIENTO GRÁFICO (GPGPU)</dt>
+               <dt>Es una tendencia relativamente reciente en la investigación de ingeniería informática. Los GPUs son co-procesadores que han sido fuertemente optimizados para procesamiento de gráficos por computadora.</dt>
+               <dt style="font-weight: bold;">CIRCUITOS INTEGRADOS DE APLICACIÓN ESPECÍFICA</dt>
+               <dt>Debido a que un ASIC (por definición) es específico para una aplicación dada, puede ser completamente optimizado para esa aplicación. Como resultado, para una aplicación dada, un ASIC tiende a superar a un ordenador de propósito general.</dt>
+               <dt style="font-weight: bold;">PROCESADORES VECTORIALES</dt>
+               <dt>Pueden ejecutar la misma instrucción en grandes conjuntos de datos. Tienen operaciones de alto nivel que trabajan sobre arreglos lineales de números o vectores.</dt>
+           
+               <h2 class="subtemas">4.2.2 Arquitectura de Computadoras Secuenciales</h2>
+               <dt>A diferencia de los sistemas combinacionales, en los sistemas secuenciales, los valores de las salidas, en un momento dado, no dependen exclusivamente de los valores de las entradas en dicho momento, sino también dependen del estado anterior o estado interno.</dt>
+               <dt>El sistema secuencial requiere de la utilización de un dispositivo de memoria que pueda almacenar la historia pasada de sus entradas (denominadas variables de estado) y le permita mantener su estado durante algún tiempo, estos dispositivos de memoria pueden ser sencillos como un simple retardador o celdas de memoria de tipo DRAM, SRAM o multivibradores biestables también conocido como Flip-Flop.</dt>
+           
+               <h2 class="subtemas">4.2.3 Organización de Direcciones de Memoria</h2>
+               <dt>Identificador para una localización de memoria con la cual un programa informático o un dispositivo de hardware pueden almacenar un dato para su posterior reutilización. </dt>
+               <dt>Una forma común de describir la memoria principal de una computadora es como una colección de celdas que almacenan datos e instrucciones. </dt>
+               <dt>Cada celda está identificada por un número  o dirección de memoria.</dt>
+               <dt>Los accesos a la memoria local suelen ser más rápidos que los accesos a memoria no local. Las arquitecturas de ordenador en las que cada elemento de la memoria principal se puede acceder con igual latencia y ancho de banda son conocidas como arquitecturas de acceso uniforme a memoria (UMA).</dt>
+               <dt>Un sistema que no tiene esta propiedad se conoce como arquitectura de acceso a memoria no uniforme (NUMA). Los sistemas de memoria distribuidos tienen acceso no uniforme a la memoria.</dt>
+         
+            </div>
+         </div>
+    <div class="secciones">
+            <div >
+               <h2 class="temas">4.3 Sistemas de Memoria Compartida</h2>
+                  <p>Un multiprocesador puede verse como un computador paralelo compuesto por varios procesadores interconectados que comparten un mismo sistema de memoria.</p>
+                  <p>Los sistemas multiprocesadores son arquitecturas MIMD con memoria compartida. Tienen un único espacio de direcciones para todos los procesadores y los mecanismos de comunicación se basan en el paso de mensajes desde el punto de vista del programador.</p>
+                  <p>Dado que los multiprocesadores comparten diferentes módulos de memoria, pudiendo acceder a un mismo módulo varios procesadores, a los multiprocesadores también se les llama sistemas de memoria compartida.</p>
+                  <br>
+                  <p>Dependiendo de la forma en que los procesadores comparten la memoria, se clasifican en sistemas multiprocesador UMA, NUMA y COMA.</p>
+                  
+                  <h2 class="subtemas">4.3.1 Redes de Interconexión dinámica (Indirecta)</h2>
+                  <p>Las redes de interconexión dinámica indirecta, también conocidas como DIND, son un tipo de arquitectura de interconexión utilizada en computadoras paralelas y supercomputadoras para conectar procesadores y memoria. En DIND, la conexión entre los nodos cambia dinámicamente en función de la carga de trabajo y las condiciones de la red, lo que permite un rendimiento óptimo y una alta escalabilidad.</p>
+                  <p>En general, las redes de interconexión dinámica indirecta y medio compartido se utilizan en redes de área local (LAN) de tamaño pequeño o mediano, donde el número de dispositivos conectados es relativamente pequeño y la cantidad de datos transmitidos no es muy grande. Sin embargo, en redes de mayor tamaño, se suelen utilizar otros tipos de arquitecturas de redes que permiten una transmisión más eficiente y una mejor gestión del tráfico de datos.</p>
+                  
+                  <h2 class="subsubtemas">Conmutadas</h2>
+                  <p>Una red conmutada o de conmutación, es clasificada como una conexión de diferentes ordenadores, independientemente de su estructura para que se puedan interconectarse y al mismo tiempo intercambiar informaciones, sin olvidar de los requerimientos o recursos que la complementan.</p>
+                  <dt style="font-weight: bold;">* Redes Experimentales </dt>
+                  <dt>Este tipo de red de acceso está vinculada con las universidades y otras diferentes entidades educativas superiores, que están plenamente dedicadas a la investigación sobre las conexiones de redes de los ordenadores. Hay que destacar que también este tipo de red de acceso pertenece a la familia de los protocolos TCP/IP, el mismo que fue desarrollada por este tipo de red de acceso.</dt>
+                  <dt style="font-weight: bold;">* Red Académica Originada</dt>
+                  <dt>Este tipo de red fue originada desde el 1981, cuando se dio inicios a la producción y creación de correos electrónicos y demás tipos de transferencias de informaciones y archivos conformadas por 20700 puentes de red o nodos interconectados distribuidos a nivel mundial</dt>
+                  <dt style="font-weight: bold;">* Colectiva de Redes </dt>
+                  <dt>Este término hace referencia de varias redes que están lideradas por el departamento de defensa o mayormente conocidos como DDN, que son las defensas del área de información. Hay que destacar también que cuando se dé una descripción en una letra minúscula, esta Colectiva de Red realizara una referencia genérica para hacer una interconsulta diversa de red</dt>
+                  <dt style="font-weight: bold;">* Red de Fundación Nacional</dt>
+                  <dt>Este tipo de red de acceso consiste en una red nacional de interconexiones de ordenadores, y así podrán brindar una información de una determinada entidad educativa hacia otras.</dt>
+               <br>
+             </div>
+             <div><img src="https://image.slideserve.com/902771/memoria-compartida-distribuida3-l.jpg"></div>
+         </div>
+
+         <div class="secciones">
+            <div >
+               <div> <h2  class="temas">4.4 Sistemas de Memoria distribuida. Multicomponentes </h2> </div>
+               <p>Existen dos tipos fundamentales de sistemas de memoria distribuida o multicomputadoras. El primero es un sistema en el que una única computadora cuenta con varias CPUs conectadas por un bus de datos, mientras que el segundo tipo utiliza varios ordenadores, cada uno con su propio procesador, interconectados por una red de comunicación de mayor o menor velocidad.</p>
+                 <p>En cambio, un clúster es un tipo de arquitectura paralela distribuida que consta de varios ordenadores independientes interconectados que trabajan juntos como un único recurso computacional, aunque cada ordenador puede ser utilizado de forma independiente o separada. En esta arquitectura, el ordenador paralelo se compone esencialmente de una colección de procesadores secuenciales, cada uno con su propia memoria local, que pueden trabajar juntos.</p>
+               <dt>Ventajas:</dt>
+               <dt>* El número de nodos puede ir desde algunas decenas hasta varios miles (o más).</dt>
+               <dt>* La arquitectura de paso de mensajes tiene ventajas sobre la de memoria compartida cuando el número de procesadores es grande.</dt>
+               <dt>* El número de canales físicos entre nodos suele oscilar entre cuatro y ocho.</dt>
+               <dt>* Esta arquitectura es directamente escalable y presenta un bajo coste para sistemas grandes.</dt>
+               <br>
+               <dt>Desventajas:</dt>
+               <dt>* Se necesitan técnicas de sincronización para acceder a las variables compartidas. </dt>
+               <dt>* La contención en la memoria puede reducir significativamente la velocidad.</dt>
+               <dt>* No son fácilmente escalables a un gran número de procesadores.</dt>
+               
+               <h2 class="subtemas">4.4.1 Redes de interconexión estáticas </h2>
+               <p>Los multicomputadores utilizan redes estáticas con enlaces directos entre nodos. Cuando un nodo recibe un mensaje lo procesa si viene dirigido a dicho nodo.</p>
+               <p>Si el mensaje no va dirigido al nodo receptor lo reenvía a otro por alguno de sus enlaces de salida siguiendo un protocolo de encaminamiento.</p>
+               
+               <h2 class="subsubtemas">Clases de redes de interconexión</h2>
+               <dt>Formación lineal:</dt>
+               <dt>Se trata de una red unidimensional en que los nodos se conectan cada uno con el siguiente medianteN-1 enlaces formando una línea.</dt>
+               <dt>Mallas y toros:</dt>
+               <dt>Esta red de interconexión es muy utilizada en la práctica. Las redes en toro son mallas en que sus filas y columnas tienen conexiones en anillo, esto contribuye a disminuir su diámetro. Esta pequeña modificación permite convertir a las mallas en estructuras simétricas y además reduce su diámetro a la mitad.</dt>
+
+               <h2 class="temas">4.5 Casos para estudio</h2>
+               <h2 class="subtemas">PROCESAMIENTO DE GRANDES CONJUNTOS DE DATOS:</h2>
+               <dt>El procesamiento de grandes conjuntos de datos puede requerir una gran cantidad de recursos de cómputo. Se pueden utilizar técnicas de procesamiento paralelo para acelerar el procesamiento y mejorar la eficiencia. Por ejemplo, el sistema de procesamiento de datos Apache Hadoop utiliza técnicas de procesamiento paralelo para analizar grandes conjuntos de datos.</dt>
+               <h2 class="subtemas">APRENDIZAJE PROFUNDO:</h2>
+               <dt>El aprendizaje profundo implica el entrenamiento de redes neuronales profundas en grandes conjuntos de datos. Se pueden utilizar técnicas de procesamiento paralelo para acelerar el entrenamiento y mejorar la precisión. Por ejemplo, el sistema de aprendizaje profundo TensorFlow utiliza técnicas de procesamiento paralelo para entrenar redes neuronales en GPUs.</dt>
+               <h2 class="subtemas">SIMULACIÓN DE SISTEMAS FÍSICOS:</h2>
+               <dt>La simulación de sistemas físicos, como sistemas mecánicos o sistemas electromagnéticos, puede requerir una gran cantidad de recursos de cómputo. Se pueden utilizar técnicas de procesamiento paralelo para acelerar la simulación y mejorar la precisión. Por ejemplo, el software de simulación COMSOL Multiphysics utiliza técnicas de procesamiento paralelo para simular sistemas físicos complejos.</dt>
+               <h2 class="subtemas">MODELADO DE CLIMA Y PREDICIÓN METEOROLÓGICA:</h2>
+               <dt>El modelado de clima y la predicción meteorológica pueden requerir una gran cantidad de recursos de cómputo. Se pueden utilizar técnicas de procesamiento paralelo para mejorar la precisión de los modelos y acelerar la predicción. Por ejemplo, el modelo de predicción numérica del tiempo (NWP) del Centro Europeo de Predicción del Tiempo a Medio Plazo utiliza técnicas de procesamiento paralelo para predecir el clima a escala global.</dt>
+               <h2 class="subtemas">ENCRIPTACIÓN</h2>
+               <dt>Existen modos de cifrado de datos que hacen uso del procesamiento en paralelo para acelerar el rendimiento en cifrado/descifrado de los datos, como por ejemplo: </dt>
+               <dt style="margin-left: 35px;">* GCM (Galois/Counter Mode)</dt>
+               <dt style="margin-left: 35px;">* AES-CTR</dt>
+               <h2 class="subtemas">MEDICINA </h2>
+               <dt>En el área médica, procesos como tomografías asistidas por computadora requieren de un procesamiento veloz para que se tenga un diagnostico concreto.</dt>
+               <h2 class="subtemas">PROCESAMIENTO DE IMAGENES</h2>
+               <dt>El procesamiento digital de imágenes utiliza el procesamiento paralelo principalmente para el ahorro de recursos en cuestión de tiempos de ejecución y hardware utilizados al momento de enfocar, desenfocar, detectar bordes, entre otras acciones. </dt>
+        
+            </div>
+            <div><img src="https://i.ytimg.com/vi/ad2YWdyyfIU/maxresdefault.jpg"></div>
+            <br> 
+         </div>
+
+
+
+
+
+
+      </div>
+        <div class="menu-secundario">
+         <br>
+         <p style="text-align: center; padding-top: 10px; color: rgb(243, 196, 255); font-size: 18px; font-weight: bold;">Practicas de la Materia</p>
+         <a href="https://drive.google.com/file/d/1dUQzORZBeXVQyR3mMaWLT3rOhXIUma2n/view?usp=sharing">Practica 1 </a>
+		<a href="https://drive.google.com/file/d/18zN1AS_CawljzKex0qHj0nif4yaFL4GE/view?usp=sharing">Practica 2</a>
+		<a href="https://drive.google.com/file/d/1RqBAs-YKQ92xWrcZFDCzZ-6BMUJUE8VU/view?usp=sharing">Practica 3 </a>
+		<a href="https://drive.google.com/file/d/1zuNVsclEo2hFF96cYg-YP5Q6ZgQn5-c6/view?usp=sharing">Gamas de equipos de computo</a>
+		<a href="https://drive.google.com/file/d/1qXbxeYH8CUo3tlTwm_OBDlCfijDF4MwI/view?usp=sharing">Diseño de equipos</a>
+		<a href="https://drive.google.com/file/d/1N4tvbXIdkgvjBYLLOd2-EEf_LlxmMlfM/view?usp=sharing">Cotizacion de equipos</a>
+       </div>
+      </div>
+      
+   
+      <footer>
+         <nav>
+               <ul>
+                  <li> <a href="https://saltillo.tecnm.mx/"> Pagina del Instituto Tecnologico de Saltillo</a></li>
+                  <li> <a href="https://www.facebook.com/TecNMcampusSaltillo" > Pagina de Facebook Instituto Tecnologico de Saltillo</a>  </li>
+                  <li> <a href="https://goo.gl/maps/AL1AEUQexdHedPR68">Ubicacion del Instituto Tecnologico de Saltillo </a> </li>
+                  <li> <p> Adrian Zavala Ruvalcaba  - 21051538</p> </li>
+               </ul>
+            </nav>
+         </footer>
+   </body>
+</html>

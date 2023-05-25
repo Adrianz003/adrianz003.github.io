@@ -1,0 +1,181 @@
+<html>
+   <head>
+	
+	<title>Unidad 2</title>
+    <link rel="stylesheet" type "text/css" href ="estilos.css">
+
+   </head>
+   <body>
+      <h1> <a href ="index.html">Arquitectura de Computadoras</a></h1>
+      <nav>
+         <ul>
+            <li> <a href = "unidad1.html"> Unidad 1 </a> </li>
+            <li> <a href = "unidad2.html"> Unidad 2 </a> </li>
+            <li> <a href = "unidad3.html"> Unidad 3 </a> </li>
+            <li> <a href = "unidad4.html"> Unidad 4 </a> </li>
+               
+            
+         
+         </ul>
+      </nav>
+   
+      <div class= "contenido"> 
+      <div class="articulos">
+         <div >
+            <h2 class="masGrande">Unidad 2 - Estructura y funcionamiento de la CPU</h2>
+            
+         </div>
+             <!--Cuarto tema del primer unidad-->
+             <div> <h2 class="temas"> 2.1 - Organizacion del procesador</h2> </div>
+             <div class="secciones">
+                <div>
+                    <p>La Unidad de Procesamiento (CPU) controla el funcionamiento del computador y lleva a cabo sus funciones de procesamiento de datos. Frecuentemente se le llama procesador.</p>
+                    <p>Un procesador, incluye tanto registros visibles por el usuario como registros de control/estado.
+                     Los registros visibles por el usuario pueden ser de uso general o tener una utilidad especial, mientras que los registros de control y estado se usan para controlar el funcionamiento del procesador, un claro ejemplo es el contador de programa.</p>
+                    <dl>
+                          <dd><p>
+                           Lleva a cabo una gran variedad de:
+                           <dt>* Cálculos</dt>
+                           <dt>* Comparaciones numéricas</dt>
+                           <dt>* Transferencias de datos como respuesta a las peticiones de los programas que están siendo ejecutados en memoria.</dt>
+                           </p></dd>
+                     </dl>
+                  </div>
+            </div>
+         
+
+             <!--Cuarto tema del primer unidad-->
+             <div> <h2 class="temas"> 2.2 - Estructuras de Registros </h2> </div>
+             <div class="secciones">
+                <div>
+                  <dt>Registros del CPU</dt>
+                    <p>Se emplean para controlar las instrucciones en ejecución, manejar direccionamiento de memoria y propiciar la capacidad aritmética.</p>
+                    <p>Los registros vienen de tres tipos: datos, direcciones e índice, que tiene lugar en casi todos los aspectos de la operación del CPU.</p>
+                    <p>El tamaño de un registro depende del CPU; los más simples tienen registros que aceptan 8 o 16 bits de datos y los más complejos tienen registros de 32, 48 o 64 bits.
+
+                     <h2 class = "subtemas">2.2.1 Registros Visibles Para el Usuario </h2>
+               <p>Un registro visible al usuario es aquél que puede ser referenciado por medio del lenguaje máquina que ejecuta la CPU. Prácticamente todos los diseños contemporáneos de CPUs están provistos de varios registros visibles al usuario, en oposición a disponer de un único acumulador.
+               </p>
+
+                    </p>
+                    <dl>
+                          <dd><p>
+                           Podemos clasificarlos en:
+                           <dt style="margin-left: 35px;">* Uso General</dt>
+                           <dt style="margin-left: 35px;">* Datos</dt>
+                           <dt style="margin-left: 35px;">* Direcciones</dt>
+                           <dt style="margin-left: 35px;">* Códigos de Condición</dt>
+                           </p></dd>
+                     </dl>
+                     <p>Los registros de uso general pueden ser asignados por el programador a diversas funciones. A veces, su uso dentro del repertorio de instrucciones es para contener el operando para cualquier código de operación.
+                        Esto proporciona una utilización de registros de auténtico uso general. Con frecuencia, sin embargo, existen restricciones. Por ejemplo, puede haber registros específicos para operaciones en coma flotante.</p>
+                     <p>En algunos casos los registros de uso general pueden ser utilizados para funciones de direccionamiento. En otros casos hay una separación clara o parcial entre registros de datos y registros de direcciones.
+                        Los registros de datos pueden ser usados únicamente para contener datos y no se pueden emplear en el cálculo de una dirección de operando.</p>
+                     <p>Los registros de dirección pueden ser en sí registros de uso más o menos general, o pueden estar dedicados a un modo de direccionamiento particular. El caso más conocido es el puntero a pila. La cantidad de registros generales o especializados es una cuestión de diseño. No hay solución óptima, pero la tendencia parece ir hacia el uso de registros especializados.
+                        Otro problema de diseño es el numero de registros, de uso general o de datos más direcciones, que tienen que incluirse.</p>
+                     <p>A mayor cantidad de registros se requieren mayor cantidad de bits en el campo de operando. Parece óptimo entre 8 y 32 registros. Menos registros se traducen en más referencias a memoria; más registros no reducen notablemente las referencias a memoria. Por último, está la cuestión de la longitud de los registros.
+                        Los registros que han de contener direcciones han de ser lo suficientemente grandes como para albergar la dirección más grande. Los registros de datos deben ser capaces de contener valores de la mayoría de tipos de datos.
+                        Algunas máquinas permiten que los registros contiguos sean usados como uno para contener valores de doble longitud.</p>
+                     <p>Una categoría final de registros, que es al menos parcialmente visible al usuario, contiene códigos de condición (también llamados indicadores o flags).
+                        Los códigos de condición son bits fijados por el hardware de la CPU como resultado de alguna operación. Por ejemplo, una operación aritmética puede producir un resultado positivo, negativo o nulo, o con desbordamiento. Además de almacenarse el propio resultado en un registro o en la memoria, se obtiene también un código de condición.
+                         </p>
+                     <p>Los bits de códigos de condición se reúnen en uno o más registros. Por lo general, forman parte de un registro de control.
+                        Comúnmente, las instrucciones de máquina permiten que estos bits sean leídos por referencia implícita, pero no pueden ser alterados por el programador.</p>
+                  
+                        <h2 class = "subtemas">2.2.2 Registros de Control y de Estados </h2>
+                        <dt>Registros de Control</dt>
+                        <p>Hay diversos registros de la CPU que se pueden emplear para controlar su funcionamiento. La mayoría de éstos, en la mayor parte de las máquinas, no son visibles al usuario. Algunos de ellos pueden ser visibles a instrucciones de máquina ejecutadas en un modo de control o de sistema operativo. </p>
+                        <p>Naturalmente, máquinas diferentes tendrán diferentes organizaciones de registros y usará distinta terminología. Se enumera aquí una lista razonablemente completa de tipos de registros, con una breve descripción. Son esenciales cuatro registros para la ejecución de una instrucción: el contador de programa, el registro de dirección, el registro de instrucción y el registro de datos.
+                           El contador de programa contiene una dirección de instrucción. Típicamente, la CPU actualiza el PC después de cada captación de instrucción de manera que siempre apunta a la siguiente instrucción a ejecutar. Una instrucción de bifurcación o salto también modificará el contenido de PC. La instrucción captada se carga en el registro de instrucción, donde son analizados el código de operación y los campos de operando.
+                           Se intercambian datos con la memoria por medio de registro de direcciones y el de datos. En un sistema con organización de bus, el de direcciones se conecta directamente al bus de direcciones, y el de datos directamente al bus de datos.
+                            Los registros visibles al usuario, sucesivamente, intercambian datos con el de datos. Los cuatro registros que acaban de mencionar se usan para la transferencia de datos entre la CPU y la memoria. Dentro de la CPU, los datos tienen que ofrecerse a la ALU para su procesamiento. La ALU puede tener acceso directo al de datos y a los registros visibles al usuario. Como alternativa, puede haber registros intermedios adicionales en el límite de la ALU; estos registros sirven como registros de entrada y salida de la ALU e intercambian datos con el de datos y los registros visibles al usuario.</p>
+                          
+                            <dt>Registros de estado</dt>
+                             <p>El registro de estado, también conocido como registro de bandera, palabra de estado del programa y registro de código de condición, se define como un conjunto de bits de bandera dentro de un procesador.</p>
+                              <p>Un registro es un circuito procesador y es muy parecido a una ubicación de memoria, lo que significa que los datos podrían escribirse y leerse. A diferencia de una ubicación de memoria, el registro de estado a menudo no tiene una dirección porque el microprocesador la usa internamente. En una unidad central de procesamiento (CPU) de 8 bits, se puede establecer un bit de registro de estado, igual al número 1, o borrar , igual al número 0, mediante una variedad de resultados de operación del procesador. El procesador a veces establece o borra los bits, pero otras veces, una instrucción de programa particular establece o borra los bits.
+
+                              </p>
+                              <p>Los bits de registro de estado también se denominan banderas o bits de bandera, y el programador los utiliza para ciertos fines de programación. Cada bandera en un registro de estado tiene un propósito único.
+                                 El indicador de acarreo se establece si una operación anterior hizo que el séptimo bit - o indicador negativo - se desbordara, o hiciera que el indicador de transporte se desbordara. Se establece durante los cambios de lógica, comparación y aritmética. El indicador de cero se establece si el resultado de la operación más reciente fue 0.
+                                 
+                                 </p>
+                              <p>Un indicador llamado "deshabilitar interrupción" funciona permitiendo o deshabilitando la operación de interrupciones, que son instrucciones que detienen temporalmente ciertas operaciones para que se puedan realizar otras operaciones. Cuando se establece este indicador en particular, no se permite que funcionen las interrupciones, pero cuando está claro, se permiten las interrupciones. Otra bandera llamada bandera decimal permite al procesador seguir un modo binario más avanzado para realizar ecuaciones aritméticas impecables. Cuando se establece la bandera, utiliza este modo binario avanzado. Otro bit de registro es el bit de interrupción, que se establece cuando se ejecuta el comando Force Interrupt (BRK).</p>
+                     
+                           <h2 class="subtemas">2.2.3 Ejemplos de Registros de CPU Reales</h2>
+                           <dt>La CPU tiene 14 registros internos, cada uno de 16 bits. Los primeros cuatro, AX, BX, CX, y DX son registros de uso general y también pueden ser utilizados como registros de 8 bits, para utilizarlos como tales es necesario referirse a ellos como por ejemplo: AH y AL, que son los bytes alto (high) y bajo (low) del registro AX. Esta nomenclatura es aplicable también a los registros BX, CX y DX.</dt>
+                        </div>
+            </div>
+
+            <h2 class="temas">2.3 El Ciclón de Instrucciones</h2>
+            <div class="secciones">
+                  <div><p>La búsqueda es el proceso de obtener instrucciones de un programa o un elemento de datos de la memoria. El término decodificar se refiere al proceso de traducir las instrucciones a señales que la computadora puede ejecutar.
+                     Ejecutar es el proceso de llevar a cabo los comandos. Almacenamiento en este contexto significa escribir el resultado a la memoria.</p>
+                  <p>En algunas computadoras, el procesador busca, decodifica, ejecuta y almacena solo una instrucción a la vez. En estas computadoras el procesador espera hasta que una instrucción completa las cuatro etapas del ciclo antes de iniciar a trabajar con la siguiente instrucción.</p>
+                  <dt>Hoy día la mayoría de las computadoras personales soportan un concepto llamado pipelining:</dt>
+                     <dt>Con pipelining los procesadores inician la búsqueda de una segunda instrucción antes de que se haya completado el ciclo de la computadora de la primera instrucción. Los procesadores que cuentan con pipelining habilitado son más rápidos en el procesamiento porque no tienen que esperar para que una instrucción complete el ciclo de computadora antes de buscar la siguiente.
+      
+                     </dt></div></div>
+            
+                     <h2 class="subtemas">2.3.1 Ciclo Fetch-Decode-Execute</h2>
+                           <dt>El encargado de ejecutar un programa en una computadora u otro sistema computacional es el CPU, lo realiza siguiendo el llamado ciclo Fetch Decode Execute, con este ciclo se ejecutan todas las tareas que una computadora puede realizar.
+                              Este ciclo tiene algunas variantes y conforme ha avanzado el tiempo y la tecnología ha sufrido algunos cambios, pero el ciclo básico se conforma de las siguientes etapas:</dt>
+                           <dt style="margin-left: 35px;">* Traer la instrucción: </dt>
+                           <dt  style="margin-left: 35px;">Se obtiene la instrucción desde memoria y se almacena en el registro del CPU para instrucciones.
+                           Decodificar la instrucción: Se identifica el modo de direccionamiento de la instrucción y la ubicación de los datos a tratar, ya sea de
+                           memoria, registro o instrucción directamente.</dt>
+
+                           <dt style="margin-left: 35px;">* Traer la instrucción: </dt>
+                           <dt  style="margin-left: 35px;">Se obtiene la instrucción desde memoria y se almacena en el registro del CPU para instrucciones.
+                           <dt style="margin-left: 35px;">* Decodificar la instrucción: </dt>
+                           <dt  style="margin-left: 35px;">Se identifica el modo de direccionamiento de la instrucción y la ubicación de los datos a tratar, ya sea de
+                              memoria, registro o instrucción directamente.</dt>
+                           <dt style="margin-left: 35px;">* Carga de Parámetros: </dt>
+                           <dt  style="margin-left: 35px;">Se ejecuta la lectura, cargando todos los datos identificados en el paso anterior.</dt>
+                           <dt style="margin-left: 35px;">* Ejecutar: </dt>
+                           <dt  style="margin-left: 35px;">Se ejecuta la instrucción ya configurada, realiza la tarea indicada, ya sea una suma, resta, almacenar información, extraer
+                              información etc.</dt>
+                           <dt style="margin-left: 35px;">* Almacenar: </dt>
+                           <dt  style="margin-left: 35px;">Se almacena el resultado obtenido de ejecutar la instrucción, por ejemplo, el resultado de una suma o un índice (Número)
+                              como resultado de éxito de almacenar u obtener información de un archivo, entre otros.</dt>
+                           <dt style="margin-left: 35px;">* Actualizar PC: </dt>
+                           <dt  style="margin-left: 35px;">Esta etapa es la de actualizar el registro PC (Program Counter) que contiene la siguiente dirección a ejecutar.
+                           </dt>
+
+                  <h2 class="subtemas">2.3.4 Modos de Direccionamiento</h2>
+                         <dt>En informática, los modos de direccionamiento son las diferentes maneras de especificar un operando dentro de una instrucción en lenguaje ensamblador.</dt>
+                         <dt>Un modo de direccionamiento especifica la forma de calcular la dirección de memoria efectiva de un operando mediante el uso de la información contenida en registros y/o constantes, contenida dentro de una instrucción de la máquina o en otra parte.
+                           No existe una forma generalmente aceptada de nombrar a los distintos modos de direccionamiento. En particular, los distintos autores y fabricantes de equipos pueden dar nombres diferentes para el modo de hacer frente al mismo, o los mismos nombres, a los diferentes modos de direccionamiento. </dt>
+                         <dt>Además, un modo de direccionamiento que en una determinada arquitectura se trata como un modo de direccionamiento, puede representar la funcionalidad que en otra arquitectura está cubierto por dos o más modos de direccionamiento.</dt>
+
+            <h2 class="temas">2.4 Casos de Estudio de CPU reales</h2>
+            <di class="secciones">
+                  <div><p>El procesador I3: es de la línea de microprocesadores Intel de gama baja de tercera generación, y cuenta con dos núcleos y cuatro hilos de procesamiento en paralelo, una tarjeta gráfica integrada, un controlador de memoria y un controlador PCI Express 2.0 integrado. Este procesador utiliza modos de direccionamiento como el implícito y el inmediato, que permiten acceder a los operandos sin especificar una dirección de forma explícita.</p>
+                  <p>Motorola 68000: Utiliza un sistema de direccionamiento basado en dos bancos de ocho registros de 32 bits. Un banco es de datos (Dn) y el otro de punteros (An), y contiene un contador de programa de 32 bits y un registro de estado de 16 bits. Los registros de datos (D0 a D7) se pueden utilizar como registros de 32 bits (.l), 16 bits (.w) y 8 bits (.b) y pueden ser utilizados como acumulador, índice o puntero. El procesador acepta modos de direccionamiento como implícito, inmediato, absoluto, directo a registro, indirecto, relativo a PC con desplazamiento y relativo a PC con índice y desplazamiento. </p>
+                  </div></di>
+
+      </div>
+        <div class="menu-secundario">
+         <br>
+         <p style="text-align: center; padding-top: 10px; color: rgb(243, 196, 255); font-size: 18px; font-weight: bold;">Practicas de la Materia</p>
+         <a href="https://drive.google.com/file/d/1dUQzORZBeXVQyR3mMaWLT3rOhXIUma2n/view?usp=sharing">Practica 1 </a>
+		<a href="https://drive.google.com/file/d/18zN1AS_CawljzKex0qHj0nif4yaFL4GE/view?usp=sharing">Practica 2</a>
+		<a href="https://drive.google.com/file/d/1RqBAs-YKQ92xWrcZFDCzZ-6BMUJUE8VU/view?usp=sharing">Practica 3 </a>
+		<a href="https://drive.google.com/file/d/1zuNVsclEo2hFF96cYg-YP5Q6ZgQn5-c6/view?usp=sharing">Gamas de equipos de computo</a>
+		<a href="https://drive.google.com/file/d/1qXbxeYH8CUo3tlTwm_OBDlCfijDF4MwI/view?usp=sharing">Diseño de equipos</a>
+		<a href="https://drive.google.com/file/d/1N4tvbXIdkgvjBYLLOd2-EEf_LlxmMlfM/view?usp=sharing">Cotizacion de equipos</a>
+      </div>
+      </div>
+      
+   
+      <footer>
+         <nav>
+               <ul>
+                  <li> <a href="https://saltillo.tecnm.mx/"> Pagina del Instituto Tecnologico de Saltillo</a></li>
+                  <li> <a href="https://www.facebook.com/TecNMcampusSaltillo" > Pagina de Facebook Instituto Tecnologico de Saltillo</a>  </li>
+                  <li> <a href="https://goo.gl/maps/AL1AEUQexdHedPR68">Ubicacion del Instituto Tecnologico de Saltillo </a> </li>
+                  <li> <p> Adrian Zavala Ruvalcaba  - 21051538</p> </li>
+               </ul>
+            </nav>
+         </footer>
+   </body>
+</html>
